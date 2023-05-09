@@ -1,3 +1,3 @@
-This is the code for [randompapers.net](http://randompapers.net).
+This is an adaptation of [randompapers.net](http://randompapers.net) that integrates with iOS Shortcuts app.
 
 You will need to add your [NASA ADS](https://ui.adsabs.harvard.edu/help/api/) API key in `ads_rand.py`.
