@@ -2,7 +2,7 @@ import requests
 import numpy as np
 from datetime import datetime
 
-api_key =
+api_key = ''
 
 # Work out the month and year to search
 now = datetime.now()
