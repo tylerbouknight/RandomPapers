@@ -1,4 +1,4 @@
-# NASA ADS Random Papers Script
+# NASA ADS randomPapers
 
 ## Overview
 This script is a modified version of the original `ads_rand.py` ([randompapers.net](http://randompapers.net)), tailored to streamline the process of fetching random papers from the NASA Astrophysics Data System (ADS). Focused on simplicity and efficiency, this version introduces several key changes to optimize the user experience and adapt the script to more specific use cases.
@@ -13,3 +13,18 @@ This script is a modified version of the original `ads_rand.py` ([randompapers.n
 2. **Directory Handling**: Removed directory-related variables and checks.
 3. **Date Calculation Logic**: Implemented a new mechanism to automatically determine the search date range based on the current month and year.
 4. **Simplified API Request**: Overhauled the API request structure for enhanced efficiency and relevancy.
+
+### Usage
+
+Run the script in a Python environment with necessary dependencies installed. Ensure you have an API key for ADS. The script will output a list of paper titles along with their respective links for the selected month.
+
+#### Dependencies
+
+- `requests`: For making HTTP requests to the ADS API.
+- `numpy`: For random selection of papers.
+- `datetime`: To determine the current date and calculate the search month/year.
+- `re`: For regular expression operations related to DOI handling.
+
+---
+
+Feel free to modify and expand this README to better fit the specifics of your project 
