@@ -14,11 +14,11 @@ This script is a modified version of the original `ads_rand.py` ([randompapers.n
 3. **Date Calculation Logic**: Implemented a new mechanism to automatically determine the search date range based on the current month and year.
 4. **Simplified API Request**: Overhauled the API request structure for enhanced efficiency and relevancy.
 
-### Usage
+## Usage
 
 Run the script in a Python environment with necessary dependencies installed. Ensure you have an API key for ADS. The script will output a list of paper titles along with their respective links for the selected month.
 
-#### Dependencies
+### Dependencies
 
 - `requests`: For making HTTP requests to the ADS API.
 - `numpy`: For random selection of papers.
