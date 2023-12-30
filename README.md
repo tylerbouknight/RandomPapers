@@ -16,7 +16,7 @@ This script is a modified version of the original `ads_rand.py` ([randompapers.n
 
 ## Usage
 
-Run the script in a Python environment with necessary dependencies installed. Ensure you have an API key for ADS. The script will output a list of paper titles along with their respective links for the selected month.
+Run the script in a Python environment with necessary dependencies installed. Ensure you have an API key for ADS. The script will output a list of paper titles along with their respective links.
 
 ### Dependencies
 
