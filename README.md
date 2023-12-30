@@ -1,5 +1,5 @@
-This is a simple adaptation of [randompapers.net](http://randompapers.net) that integrates the iOS Shortcuts app.
-
-You will need to add your [NASA ADS](https://ui.adsabs.harvard.edu/help/api/) API key in `Random.py`
-
-In the Pyto app (there are other options), you can use `Random.py` with this [Shortcut](https://www.icloud.com/shortcuts/a6261711adc245a78a06d910131dcc84).
+### v1.1 Changes
+- Added import of re module for regular expressions.
+- Modified API request to include ‘doi’ in the fetched data.
+- Streamlined output to display paper titles and arXiv PDF links (if available).
+- Simplified formatting by removing extra line spaces and numbering.
