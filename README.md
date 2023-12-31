@@ -1,30 +1,41 @@
-# NASA ADS randomPapers
+# NASA ADS Random Papers and VoIP Notification System
 
 ## Overview
-This script is a modified version of the original `ads_rand.py` ([randompapers.net](http://randompapers.net)), tailored to streamline the process of fetching random papers from the NASA Astrophysics Data System (ADS). Focused on simplicity and efficiency, this version introduces several key changes to optimize the user experience and adapt the script to more specific use cases.
+This repository, based off the original `ads_rand.py` ([randompapers.net](http://randompapers.net)), hosts two scripts: the original, basic `NASA ADS randomPapers` and its VoIP version with MMS capabilities. While the basic script focuses on fetching random papers from the NASA Astrophysics Data System (ADS), the new addition incorporates the ability to send selected paper details via MMS using a VoIP.ms account, broadening its utility to include automated communication.
 
 ## Key Features
-- **Simplified Date Handling**: The script now automatically calculates the current date and adjusts the search to the previous month, ensuring up-to-date queries without manual input.
-- **Refined Search Query**: By constructing a focused API request using the calculated `pubdate`, the script efficiently fetches relevant data, aligning with users' needs for current and specific research articles.
-- **Streamlined Codebase**: Removal of extra modules and code sections like file handling and feed generation, leading to a cleaner, more maintainable code structure.
+- **Automated MMS Feature**: The VoIP script can send paper details through MMS, offering a unique way to share research articles.
+- **Simplified Date Handling**: Automatically calculates the current date and adjusts the search to the previous month, ensuring up-to-date queries.
+- **Refined Search Query**: A focused API request using the calculated `pubdate` fetches relevant data, catering to specific research needs.
+- **Streamlined Codebase**: Removal of extraneous code for cleaner, more maintainable structure.
 
-## Modifications from Original Script
-1. **Removed Modules**: Discarded the use of `os`, `time`, `glob`, and `FeedGenerator`.
-2. **Directory Handling**: Removed directory-related variables and checks.
-3. **Date Calculation Logic**: Implemented a new mechanism to automatically determine the search date range based on the current month and year.
-4. **Simplified API Request**: Overhauled the API request structure for enhanced efficiency and relevancy.
+## VoIP Script
+1. **VoIP.ms MMS Integration**: Added functionality to send messages using the VoIP.ms API.
+2. **Message Preparation Function**: Formats fetched data into a structured message for sending.
+3. **Error Handling**: Improved error checking by verifying the HTTP response status.
+4. **Removed Modules**: Discarded `os`, `time`, `glob`, and `FeedGenerator` from the original script.
+5. **Directory Handling**: Removed directory-related variables and checks.
+6. **Date Calculation Logic**: New mechanism for automatic date range determination.
+7. **Simplified API Request**: Enhanced API request structure for efficiency.
 
 ## Usage
 
-Run the script in a Python environment with necessary dependencies installed. Ensure you have an API key for ADS. The script will output a list of paper titles along with their respective links.
+### Basic Script
+Run the script in a Python environment with the necessary dependencies installed. You'll need an API key for ADS. The script outputs a list of paper titles with their links.
+
+### VoIP Script
+Before running the enhanced script, you need a VoIP.ms account and its associated credentials. After setting up your account, configure the script with your VoIP.ms API username, password, and DID number. Also, provide your recipient phone number in the script. This script then fetches random papers and sends their details via MMS to the specified phone number.
+
+#### Setting up VoIP.ms
+1. **Create an Account**: Sign up at [VoIP.ms](https://voip.ms/).
+2. **Configure API Access**: In your VoIP.ms dashboard, navigate to `API Configuration` to set up and retrieve your API credentials.
+3. **Get a DID Number**: Purchase a DID number from VoIP.ms, which will be used as the sender ID in your messages.
 
 ### Dependencies
 
-- `requests`: For making HTTP requests to the ADS API.
+- `requests`: For making HTTP requests to the ADS and VoIP.ms APIs.
 - `numpy`: For random selection of papers.
 - `datetime`: To determine the current date and calculate the search month/year.
-- `re`: For regular expression operations related to DOI handling.
+- `re`: For regular expression operations, especially in DOI handling.
 
 ---
-
-Feel free to modify and expand this README to better fit the specifics of your project 
